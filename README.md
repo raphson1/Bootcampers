@@ -1,6 +1,5 @@
 # groupproject2
 
-
 Use Node.js and Express.js to create a RESTful API. \
 Use Handlebars.js as the template engine. \
 Use MySQL and the Sequelize ORM for the database. \
