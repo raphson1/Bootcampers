@@ -32,13 +32,13 @@ Jobs.init(
 //         keys: 'id',
 //     }
 //    },
-//    user_id: { //references the current logged in user by ID via the user model
-//        type: DataTypes.INTEGER,
-//        references: {
-//            model: 'user',
-//            keys: 'id',
-//        }
-//    },
+   user_id: { //references the current logged in user by ID via the user model
+       type: DataTypes.INTEGER,
+       references: {
+           model: 'user',
+           keys: 'id',
+       }
+   },
  
 },
 {
