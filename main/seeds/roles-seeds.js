@@ -1,4 +1,4 @@
-const { Roles } = require('../models/roles');
+const { Roles } = require('../models/index.js');
 
 const rolesData = [
     {

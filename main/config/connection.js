@@ -1,5 +1,8 @@
-const sequelize = require("sequelize");
 require("dotenv").config();
+const Sequelize = require("sequelize");
+
+
+console.log(process.env.DB_NAME, 'dbname')
 let sequelize;
 if (process.env.JAWSDB) {
   sequelize = new Sequelize(process.env.JAWSDB);
