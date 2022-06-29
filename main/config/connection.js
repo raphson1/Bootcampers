@@ -1,6 +1,5 @@
-const sequelize = require("sequelize");
+const Sequelize = require("sequelize");
 require("dotenv").config();
-let sequelize;
 if (process.env.JAWSDB) {
   sequelize = new Sequelize(process.env.JAWSDB);
 } else {
@@ -15,4 +14,11 @@ if (process.env.JAWSDB) {
     }
   );
 }
+sequelize.query(
+  `CREATE DATABASE IF NOT EXISTS codinghire_db`,
+  function (err, results) {
+    console.log(results);
+    console.log(err);
+  }
+);
 module.exports = sequelize;
