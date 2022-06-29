@@ -24,14 +24,14 @@ Applicant.init(
        type: DataTypes.STRING,
        allowNull: false,
    },
-   role_id: { // this dictates what you classify yourself as an applicant user. You choose from a dropdown that references the roles table (on frontend)
-       type: DataTypes.STRING,
-       allowNull: false,
-       references: {
-        model: 'roles',
-        keys: 'id',
-    }
-   },
+//    role_id: { // this dictates what you classify yourself as an applicant user. You choose from a dropdown that references the roles table (on frontend)
+//        type: DataTypes.STRING,
+//        allowNull: false,
+//        references: {
+//         model: 'roles',
+//         keys: 'id',
+//     }
+//    },
    email: { //email so that anyone can contact you
        type: DataTypes.STRING,
        allowNull: false,
@@ -49,6 +49,13 @@ Applicant.init(
  
  
 },
+{
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'applicant',
+  }
  
 );
  

@@ -24,23 +24,30 @@ Jobs.init(
        type: DataTypes.INTEGER,
        allowNull: false,
    },
-   role_id: { // this dictates what you as a company user are looking to hire. You choose from a dropdown that references the roles table (on frontend)
-     type: DataTypes.STRING,
-     allowNull: false,
-     references: {
-        model: 'roles',
-        keys: 'id',
-    }
-   },
-   user_id: { //references the current logged in user by ID via the user model
-       type: DataTypes.INTEGER,
-       references: {
-           model: 'user',
-           keys: 'id',
-       }
-   },
+//    role_id: { // this dictates what you as a company user are looking to hire. You choose from a dropdown that references the roles table (on frontend)
+//      type: DataTypes.STRING,
+//      allowNull: false,
+//      references: {
+//         model: 'roles',
+//         keys: 'id',
+//     }
+//    },
+//    user_id: { //references the current logged in user by ID via the user model
+//        type: DataTypes.INTEGER,
+//        references: {
+//            model: 'user',
+//            keys: 'id',
+//        }
+//    },
  
 },
+{
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'jobs',
+  }
  
 );
  
