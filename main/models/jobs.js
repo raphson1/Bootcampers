@@ -21,7 +21,7 @@ Jobs.init(
        allowNull: false,
    },
    company_name: { //name of the company posting the job. specified once the user logs in.
-       type: DataTypes.INTEGER,
+       type: DataTypes.STRING,
        allowNull: false,
    },
 //    role_id: { // this dictates what you as a company user are looking to hire. You choose from a dropdown that references the roles table (on frontend)
