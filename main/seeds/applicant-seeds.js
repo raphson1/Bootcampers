@@ -1,4 +1,4 @@
-const { Applicant } = require('../models/applicant');
+const { Applicant } = require('../models/index.js');
 
 const applicantData = [
     {
@@ -17,6 +17,6 @@ const applicantData = [
     },
 ];
 
-const seedApplicant = Applicant.bulkcreate(applicantData);
+const applicantSeeds = Applicant.bulkCreate(applicantData);
 
-module.exports = seedApplicant;
+module.exports = applicantSeeds;
