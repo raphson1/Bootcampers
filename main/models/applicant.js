@@ -14,7 +14,7 @@ Applicant.init(
      type: DataTypes.INTEGER,
      allowNull: false,
      primaryKey: true,
-     AutoIncrement: true,
+     autoIncrement: true,
    },
    applicant_name: { //name of applicant user
        type: DataTypes.STRING,

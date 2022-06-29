@@ -1,4 +1,4 @@
-const { Roles } = require('../models/index.js');
+const { Roles } = require('../models');
 
 const rolesData = [
     {
@@ -15,6 +15,6 @@ const rolesData = [
     }
 ];
 
-const roleSeeds = Roles.bulkCreate(rolesData);
+const roleSeeds = () =>  Roles.bulkCreate(rolesData);
 
 module.exports = roleSeeds;

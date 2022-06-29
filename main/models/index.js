@@ -1,7 +1,7 @@
-// const User = require('./user');
-// const Applicant = require('./applicant');
+const User = require('./user');
+const Applicant = require('./applicant');
 const Jobs = require('./jobs');
-// const Roles = require('./roles');
+const Roles = require('./roles');
  
 // User.hasMany(Applicant,{
 //    foreignKey: 'user_id',
@@ -38,4 +38,4 @@ const Jobs = require('./jobs');
  
 // module.exports = {User, Applicant, Jobs, Roles};
 
-module.exports = {Jobs};
+module.exports = {Jobs, Applicant, User, Roles};
