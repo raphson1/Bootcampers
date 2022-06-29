@@ -14,7 +14,7 @@ Jobs.init(
      type: DataTypes.INTEGER,
      allowNull: false,
      primaryKey: true,
-     AutoIncrement: true,
+     autoIncrement: true,
    },
    job_title: { //name of the title they are looking to hire
        type: DataTypes.STRING,

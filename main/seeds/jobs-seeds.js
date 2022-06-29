@@ -1,4 +1,5 @@
- [
+const { Jobs } = require('../models');
+const jobsData = [
     {
         job_title: 'Front-End Develloper',
         company_name: 'apple',
@@ -12,3 +13,7 @@
         // user_id: 4
     }
 ];
+
+const roleJobs = () =>  Jobs.bulkCreate(jobsData);
+
+module.exports = roleJobs;
