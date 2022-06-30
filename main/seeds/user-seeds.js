@@ -4,13 +4,13 @@ const usersData = [
     {
         applicant_name: 'eric',
         email: 'eric@gmail.com',
-        password: 'coding',
+        password: 'coding12',
         user_role: 'Applicant'
     },
     {
         applicant_name: 'Vinny',
         email: 'vinny@gmail.com',
-        password: 'erisuro',
+        password: 'erisuro1',
         user_role: 'Applicant'
     }
 ];
