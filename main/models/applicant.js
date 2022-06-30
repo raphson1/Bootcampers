@@ -16,29 +16,21 @@ Applicant.init(
      primaryKey: true,
      autoIncrement: true,
    },
-   applicant_name: { //name of applicant user
-       type: DataTypes.STRING,
-       allowNull: false,
-   }, 
-   applicant_lastname: { //last name of applicant user
-       type: DataTypes.STRING,
-       allowNull: false,
+   resume: { //show only when applicant is chosen is chosen
+    type: DataTypes.STRING,
+    allowNull: false,
+    validate: {
+      isAlphanumeric: true,
+    }
    },
-//    role_id: { // this dictates what you classify yourself as an applicant user. You choose from a dropdown that references the roles table (on frontend)
-//        type: DataTypes.STRING,
-//        allowNull: false,
-//        references: {
-//         model: 'roles',
-//         keys: 'id',
-//     }
-//    },
-   email: { //email so that anyone can contact you
-       type: DataTypes.STRING,
-       allowNull: false,
-       validate: {
-           isEmail:true,
-       }
-   },
+  //  dev_role_id: { // this dictates what you classify yourself as an applicant user. You choose from a dropdown that references the roles table (on frontend)
+  //      type: DataTypes.STRING,
+  //      allowNull: false,
+  //      references: {
+  //       model: 'roles',
+  //       keys: 'id',
+  //   }
+  //  },
    user_id: { //as an applicant you are logged in as 'current' user or (under the applicant userRole) so this the reference here
        type: DataTypes.INTEGER,
        references: {
