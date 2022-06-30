@@ -23,14 +23,14 @@ Applicant.init(
       isAlphanumeric: true,
     }
    },
-  //  dev_role_id: { // this dictates what you classify yourself as an applicant user. You choose from a dropdown that references the roles table (on frontend)
-  //      type: DataTypes.STRING,
-  //      allowNull: false,
-  //      references: {
-  //       model: 'roles',
-  //       keys: 'id',
-  //   }
-  //  },
+   dev_role_id: { // this dictates what you classify yourself as an applicant user. You choose from a dropdown that references the roles table (on frontend)
+       type: DataTypes.INTEGER,
+       allowNull: false,
+       references: {
+        model: 'roles',
+        keys: 'id',
+    }
+   },
    user_id: { //as an applicant you are logged in as 'current' user or (under the applicant userRole) so this the reference here
        type: DataTypes.INTEGER,
        references: {

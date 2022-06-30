@@ -1,23 +1,23 @@
 const sequelize = require('../config/connection');
-// const { Jobs } = require('../models/index.js');
-// const jobSeeds = require('./jobs-seeds');
+const jobSeeds = require('./jobs-seeds');
 const userSeeds = require('./user-seeds');
-// const roleSeeds = require('./roles-seeds');
+const roleSeeds = require('./roles-seeds');
 const applicantSeeds = require('./applicant-seeds');
 
 const seedAll = async() => {
     await sequelize.sync({ force: true });
     console.log('\n----- DATABASE SYNCED -----\n');
     await userSeeds();
-    // Jobs.bulkCreate(jobSeeds);
-    // await jobSeeds();
+    console.log('\n----- USER SYNCED -----\n');
+    await roleSeeds();
+    console.log('\n----- ROLES SYNCED -----\n');
+    await jobSeeds();
     console.log('\n----- JOBS SYNCED -----\n');
     await applicantSeeds();
     console.log('\n----- APPLICANT SYNCED -----\n');
  
-    console.log('\n----- USER SYNCED -----\n');
-    // await roleSeeds();
-    console.log('\n----- ROLES SYNCED -----\n');
+
+
 
     process.exit(0);
 };
