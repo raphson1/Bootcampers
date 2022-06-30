@@ -18,11 +18,18 @@ User.init(
      primaryKey: true,
      autoIncrement: true,
    },
-   user_name: {
+   applicant_name: { //name of user
+    type: DataTypes.STRING,
+    allowNull: false,
+  }, 
+   email: { //user email
        type: DataTypes.STRING,
        allowNull: false,
+       validate: {
+        isEmail:true,
+    }
    },
-   password: { 
+   password: { //user password
        type: DataTypes.STRING,
        allowNull: false,
        validate: {
@@ -38,6 +45,7 @@ User.init(
     type: DataTypes.STRING,
      allowNull: false,
    }
+
 },
 {
    hooks: {
