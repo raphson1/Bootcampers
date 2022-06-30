@@ -5,6 +5,6 @@ const applicantRoutes = require('./applicant-routes');
 
 router.use('/users', userRoutes);
 router.use('/jobs', jobRoutes);
-router.use('./applicant', applicantRoutes);
+router.use('/applicant', applicantRoutes);
 
 module.exports = router;
