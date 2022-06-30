@@ -2,16 +2,10 @@ const { Roles } = require('../models');
 
 const rolesData = [
     {
-        role_name: 'Front-End Develloper'
+        role_name: 'Front-End Developer'
     },
     {
-        role_name: 'Back-End Develloper',
-    },
-    {
-        role_name: 'FullStack Develloper',
-    },
-    {
-        role_name: 'Network Engineer'
+        role_name: 'Back-End Developer',
     }
 ];
 
