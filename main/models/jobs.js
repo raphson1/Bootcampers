@@ -1,10 +1,8 @@
 const { Model, DataTypes } = require('sequelize');
  
 const sequelize = require('../config/connection.js');
-const bcrypt = require('bcrypt');
  
-class Jobs extends Model {
-}
+class Jobs extends Model {}
  
 Jobs.init(
  {
