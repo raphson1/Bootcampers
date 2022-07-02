@@ -22,18 +22,16 @@ router.get('/', async (req, res) => {
 
 
 // post new job
-// router.post('/', async (req, res) => {
-//   try {
-//     const newJob = await Jobs.create({
-//       ...req.body,
-//       user_id: req.session.user_id,
-//     });
-
-//     res.status(200).json(newJob);
-//   } catch (err) {
-//     res.status(400).json(err);
-//   }
-// });
+router.post('/', async (req, res) => {
+  try {
+    const newJob = await Jobs.create({...req.body // ONCE AUTHENTICATION IS HERE, user_id: req.session.user_id,
+    });
+    console.log("Checking to see if this work", newJob);
+    res.status(200).json(newJob);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
 
 //delete a job
 // router.delete('/:id', async (req, res) => {
