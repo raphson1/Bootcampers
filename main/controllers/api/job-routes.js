@@ -5,16 +5,15 @@ const { Jobs, Roles, User } = require('../../models');
 // find all jobs
 router.get('/', async (req, res) => {
     try {
-        const jobData = await Jobs.findAll();
+        const jobData = await Jobs.findAll({});
 
     //  const jobData = await Jobs.findAll({
     // include: [
     //     {model: Roles}, {model: User},
     //   ],
     //  });
-    
+    console.log("Checking to see if this work", jobData);
      res.status(200).json(jobData);
-     console.log("Checking to see if this work", jobData);
     } catch(err) {
       res.status(500).json(err);
     }

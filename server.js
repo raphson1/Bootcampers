@@ -4,7 +4,7 @@ require("dotenv").config();
 const routes = require("./main/controllers");
 const sequelize = require("./main/config/connection");
 const session = require("express-session");
-const sequelizeStore = require("connect-session-sequelize")(session.Store);
+const SequelizeStore = require("connect-session-sequelize")(session.Store);
 // const sessionOptions = {
 //   secret: "Red Sox",
 //   resave: false,
@@ -23,7 +23,8 @@ app.set("view engine", "handlebars");
 app.use(routes);
 // app.use(session(sessionOptions));
 
-sequelize.sync({ force: true }).then(() => {
+//***DEBUGGED FORCE has to equal false or else it won't work correctly. 7/1 Bexi */
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => {
     console.log("now listening on PORT", PORT);
   });

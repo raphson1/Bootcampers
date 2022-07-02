@@ -16,9 +16,6 @@ const seedAll = async() => {
     await applicantSeeds();
     console.log('\n----- APPLICANT SYNCED -----\n');
  
-
-
-
     process.exit(0);
 };
 
