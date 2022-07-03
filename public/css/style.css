@@ -1,0 +1,111 @@
+  /* LAYOUT */
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: beige;
+  }
+
+  main {
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .container {
+    /* display: flex;
+    flex-flow: column wrap;
+    align-content: flex-start; */
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  /* navigation */
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+    border-bottom: black 2px solid;
+}
+  
+.navItem {
+  text-decoration: none;
+  color: black;
+
+}
+
+.menuItemsNav {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+
+.menuItemsNav li {
+  padding: 13px;
+}
+
+button {
+  padding: 10px;
+  background-color: transparent;
+  border: black 2px solid;
+}
+
+/* profile */
+
+.profileCard {
+  border-bottom: black solid 2px;
+  padding-bottom: 20px;
+  width: 70%;;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+
+
+
+/* login form  */
+
+.authForm {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.forms {
+  border: black 2px solid;
+  padding: 20px;
+  text-align: left;
+}
+
+form button {
+  width: 100%;
+}
+button:hover {
+background-color: black;
+color: white;
+}
+
+/* form styling basic  */
+.form-group {
+ padding: 5px;
+ border-bottom: 2px solid black;
+}
+
+.form-input {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  background-color: transparent;
+}
+
+.mainFormHeader {
+  padding-bottom: 5px;
+}
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Bootcamp Graduates </title>
+  {{!-- <link rel="stylesheet" href="/css/jass.css"> --}}
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+      <nav>
+        <!-- Conditionally render login or logout links -->
+        <h1 class="logo">
+        <span role="img" aria-label="computer-girl">👩🏽‍💻</span>
+        <a class="navItem" href="/"> Bootcampers </a>
+        <span role="img" aria-label="computer-boy">👩🏽‍🎓</span>
+      </h1>
+      <ul class="menuItemsNav"> 
+        {{#if logged_in}}
+        <li> <a class="navItem" href="/profile">profile</a> </li>
+        <li> </li> <button class="no-button" id="logout">logout</button> <li>
+        {{else}}
+         <li> </li> <a class="navItem" href="/login">login | signup </a> </li>
+        {{/if}}
+        </ul>
+      </nav>
+
+    <main>
+      <!-- Render the sub layout -->
+      {{{ body }}}
+    </main>
+    <footer>
+      
+    </footer>
+
+
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>

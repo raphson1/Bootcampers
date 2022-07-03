@@ -1,0 +1,17 @@
+<h1> Welcome To Our Website </h1>
+<div class="container"> Thank you for visiting, we are a website that showcases bootcamp graduates.<br>  Now showcasing 2022 UT Austin Bootcamp Cohort  <span role="img" aria-label="hand">🤘🏽</span>  <br>  Upload your resume as an applicant and view jobs. Or Are you looking to hire one of our awesome developers? Browse thorugh our list of candidates and post any positions you have availbale. Create an account today!
+</div>
+<img scr=""> 
+{{!-- <!-- Loop over each user object -->
+<div class="cardContainer" > 
+{{#each users as |user| }}
+<div>
+  <div class="hpItem">
+    <!-- Render user-specific data with Handlebars.js expressions -->
+    <h2> {{user.user_role}}</h2>
+    <p> Resume: {{applicant.resume}} </p>
+        <h3><a href="mailto:{{user.email}}">{{user.email}}</a></h3>
+  </div>
+</div>
+{{/each}}
+</div> --}}
