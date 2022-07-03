@@ -8,11 +8,24 @@
 
   body {
     background-color: beige;
+    font-family: 'Source Code Pro', monospace;
+
   }
 
+  h1, h2, h3 , h4, h5 , h6 {
+    text-transform: uppercase;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 900;
+    line-height: 1.4em;
+    letter-spacing: .2em;
+  }
+
+
+
   main {
-    margin-top: 50px;
+    margin-top: 40px;
     text-align: center;
+    margin-bottom: 40px;
   }
   
   .container {
@@ -56,6 +69,45 @@ button {
   padding: 10px;
   background-color: transparent;
   border: black 2px solid;
+}
+
+/* homepage  */
+
+.homepagePerksTitle {
+  margin-top: 20px;
+}
+.homepagePerksContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.perkCard {
+  padding: 50px;
+  border: 2px solid black;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 100%;
+  /* height: 35vh; */
+  border-top-left-radius: 15%;
+  border-bottom-right-radius: 15%;
+}
+
+.perkCard h3 {
+  padding-bottom: 20px;
+  text-decoration: purple wavy underline;
+}
+
+.perkCard p {
+ font-style: italic;
+ font-weight: 900;
+ color: purple
+}
+
+
+.perkCard ul {
+  list-style-type: none;
 }
 
 /* profile */
@@ -109,3 +161,13 @@ color: white;
   padding-bottom: 5px;
 }
 
+/* footer */
+
+footer {
+  text-align: center;
+}
+footer a {
+  text-decoration: none;
+  text-decoration: purple wavy underline;
+  color: black;
+}
