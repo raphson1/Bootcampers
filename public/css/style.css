@@ -20,8 +20,6 @@
     letter-spacing: .2em;
   }
 
-
-
   main {
     margin-top: 40px;
     text-align: center;
@@ -137,7 +135,11 @@ button {
 }
 
 form button {
-  width: 100%;
+  width: 60px;
+  height: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+ 
 }
 button:hover {
 background-color: black;

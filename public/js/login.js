@@ -52,8 +52,12 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        console.log(response)
-        document.location.replace('/profile');
+        var userData = await response.json()
+        if(userData.user.user_role === 'company'){
+          document.location.replace('/company');
+        } else {
+          document.location.replace('/profile');
+        }
       } else {
         alert(response.statusText);
       }
