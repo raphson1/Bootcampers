@@ -14,8 +14,15 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
+        console.log(response)
+        var userData = await response.json()
+        if(userData.user.user_role === 'company'){
+          document.location.replace('/company');
+        } else {
+          document.location.replace('/profile');
+        }
         // If successful, redirect the browser to the profile page
-        document.location.replace('/profile');
+        
       } else {
         alert(response.statusText);
       }
@@ -28,9 +35,16 @@ const loginFormHandler = async (event) => {
     const name = document.querySelector('#name-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
-    const user_role = document.querySelector('#role-signup').value.trim();
+    const userRole = document.getElementsByName("userrole")
   
-    if (name && email && password && user_role) {
+    if (name && email && password && userRole) {
+      let role = ''
+      for(var i = 0; i < userRole.length; i++){
+        if(userRole[i].checked){
+          role = userRole[i].value;
+        }
+      }
+      const user_role = role
       const response = await fetch('/api/users', {
         method: 'POST',
         body: JSON.stringify({ name, email, password, user_role }),
@@ -38,6 +52,7 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
+        console.log(response)
         document.location.replace('/profile');
       } else {
         alert(response.statusText);
