@@ -1,14 +1,39 @@
 <div class="profileCard">
   <div>
-    <h2>Welcome, {{company_name}}!</h2>
-    <p> role: {{job_title}}</p>
+    <h2>Welcome, {{name}}!</h2>
   </div>
 </div>
 <div>
   <button> See applicants</button>
-  <button> Post a job</button>
 
 </div>
+<div>
+    <div>
+      <h2>CREATE A JOB</h2>
+      <form class="new-form-job">
+        <div>
+            <input class="" type="text" id="company_name" placeholder="Company">
+        </div>
+        <div>
+            <input class="" type="text" name="" id="job_title" placeholder="Job title">
+        </div>
+        <div>
+            <input class="" type="text" id="role" placeholder="Role">
+        </div>
+        <div>
+          <button type="submit">Post</button>
+        </div>
+      </form>
+    </div>
+</div>
+</div>
+<div>
+    <h3>{{company_name}}</h3>
+    <h4>{{job_title}}</h4>
+    <h4>{{dev_role_id}}</h4>
+</div>
+
+
 
 {{!-- Need to figure out conditionals for applicant vs company | the below doesn't work --}}
 <div> 

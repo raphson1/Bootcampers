@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Jobs, Roles, User } = require('../../models');
+const withAuth = require('../../utils/auth')
 
 
 // find all jobs
@@ -22,9 +23,11 @@ router.get('/', async (req, res) => {
 
 
 // post new job
-router.post('/', async (req, res) => {
+router.post('/',withAuth, async (req, res) => {
   try {
-    const newJob = await Jobs.create({...req.body // ONCE AUTHENTICATION IS HERE, user_id: req.session.user_id,
+    const newJob = await Jobs.create({
+      ...req.body,
+      user_id: req.session.user_id,
     });
     console.log("Checking to see if this work", newJob);
     res.status(200).json(newJob);

@@ -37,8 +37,7 @@ Applicant.init(
            keys: 'id',
        }
    },
- 
- 
+
 },
 {
     sequelize,
