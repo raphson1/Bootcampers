@@ -1,3 +1,4 @@
+
 const router = require('express').Router();
 const { User, Applicant, Jobs, Roles } = require('../models');
 const withAuth = require('../utils/auth');
@@ -8,25 +9,47 @@ router.get('/', async (req, res) => {
   }
 );
 
+
+const router = require("express").Router();
+const { User, Applicant } = require("../models");
+const withAuth = require("../utils/auth");
+
+router.get("/", async (req, res) => {
+  // Pass serialized data into Handlebars.js template
+  res.render("homepage");
+});
+router.get("/applicants", withAuth, async (req, res) => {
+  const applicantData = await Applicant.findAll();
+  const applicants = applicantData.get({ plain: true });
+  return res.send("hi");
+});
+
+
 // Use withAuth middleware to prevent access to route
-router.get('/profile', withAuth, async (req, res) => {
+router.get("/profile", withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
+
       attributes: { exclude: ['password'] },
       include: [{ model: Jobs }],
+=======
+      attributes: { exclude: ["password"] },
+      include: [{ model: Applicant }],
+
     });
 
     const user = userData.get({ plain: true });
 
-    res.render('profile', {
+    res.render("profile", {
       ...user,
-      logged_in: true
+      logged_in: true,
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
 
 // DASHBOARD ROUTES
 
@@ -58,13 +81,22 @@ router.get('/allJobs/', withAuth, async (req, res) => {
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
       include: [{ model: Jobs }],
+
+router.get("/company", withAuth, async (req, res) => {
+  try {
+    // Find the logged in user based on the session ID
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ["password"] },
+      include: [{ model: Applicant }],
+
     });
 
     const user = userData.get({ plain: true });
 
     res.render('create-jobs', {
+    res.render("company", {
       ...user,
-      logged_in: true
+      logged_in: true,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -106,6 +138,7 @@ router.get('/allApplicants/', withAuth, async (req, res) => {
   res.render('graduates');
 });
 
+
 router.get('/openPosition/', async (req, res) => {
   try {
     // Get all users, sorted by name
@@ -133,13 +166,21 @@ router.get('/login', (req, res) => {
       res.redirect('/profile')
     } else{
       res.redirect('/profile');
+
+router.get("/login", (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (req.session.logged_in) {
+    if (req.session.user_role === "company") {
+      res.redirect("/company");
+    } else {
+      res.redirect("/profile");
+
     }
-   
+
     return;
   }
 
-  res.render('login');
+  res.render("login");
 });
 
 module.exports = router;
-
