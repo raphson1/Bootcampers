@@ -1,3 +1,8 @@
+<div class="profileCard">
+  <div>
+    <h2>Welcome, Companies! </h2>
+  </div>
+</div>
 <div class="authForm">
     <div class="forms">
       <h2 class="mainFormHeader">Login</h2>
@@ -24,6 +29,10 @@
           <label for="name-signup">name:</label>
           <input class="form-input" type="text" id="name-signup" />
         </div>
+          <div class="form-group">
+          <label for="lat_name-signup">last name:</label>
+          <input class="form-input" type="text" id="last_name-signup" />
+        </div>
         <div class="form-group">
           <label for="email-signup">email:</label>
           <input class="form-input" type="text" id="email-signup" />
@@ -33,15 +42,19 @@
           <input class="form-input" type="password" id="password-signup" />
         </div>
         <div class="form-group">
-            <label for="role-signup"> user role:</label>
+            <label for="role-signup"> company role:</label>
             <br>
                   <input type="radio" id="role-signup"
-                   name="userrole" value="applicant">
-                  <label for="userRole1"> applicant </label>
-              
+                   name="userrole" value="hiring manager">
+                  <label for="userRole1"> hiring manager </label>
+                
                   <input type="radio" id="role-signup"
-                   name="userrole" value="company">
-                  <label for="userRole2"> company </label>
+                   name="userrole" value="team lead">
+                  <label for="userRole2"> team lead </label>
+                  
+                  <input type="radio" id="role-signup"
+                   name="userrole" value="freelance">
+                  <label for="userRole3"> freelance </label>
               
         </div>
         <div class="form-group">

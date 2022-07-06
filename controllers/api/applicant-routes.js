@@ -17,7 +17,8 @@ router.get('/', async (req, res) => {
 // post new application
 router.post('/', async (req, res) => {
     try {
-      const newApplication = await Applicant.create({...req.body // ONCE AUTHENTICATION IS HERE, user_id: req.session.user_id,
+      const newApplication = await Applicant.create({...req.body
+        // ONCE AUTHENTICATION IS HERE, user_id: req.session.user_id,
       });
       console.log("Checking to see if this work", newApplication);
       res.status(200).json(newApplication);

@@ -4,16 +4,26 @@
     <p> role: {{user_role}}</p>
     <p> contact: {{email}}</p>
       <br>
-    <p> please see the menu options below (need help with the conditionals)</p>
+    <p> please see the menu options below </p>
   </div>
 </div>
 
+
+
+ <a href="/createJobs"> <button> Create A Job </button> </a>
+{{!-- NOT NEEDED FOR COMPANIES ONLY APPLICANTS <a href="/allJobs">  <button id="create-post"> View All Jobs </button> </a> --}}
+ <a href="/allApplicants"> <button> View All Applicants </button> </a>
+
+{{!-- Phase #2 --}}
 {{!-- Need to figure out conditionals for applicant vs company | the below doesn't work --}}
-<div> 
-  <p> this would be for 'applicant below' </p>
-  <br>
-  {{!-- {{#if user_role}} --}}
- <button>Upload resume</button>
- <button>Job posted</button>
+ {{!-- {{#if this.user_role}}
+
 </div>
-<script src="./js/profile.js"></script>
+{{else}}
+ <a href=""> <button>Upload resume</button> </a>
+<a href="#">  <button id=""> Coming Soon </button> </a>
+{{/if}}
+<br>
+<br> --}}
+
+{{!-- <script src="./js/profile.js"></script> --}}

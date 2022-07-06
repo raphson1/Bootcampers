@@ -2,14 +2,20 @@ const { Applicant } = require('../models');
 
 const applicantData = [
     {
-        resume: 'link goes here',
-        dev_role_id: 1,
-        user_id: 1,
+        name: 'Jenna',
+        last_name: 'Richardson',
+        email: 'jennaRHS@gmail.com',
+        resume: 'https://github.com/',
+        dev_role:'Front End Developer',
+        // phase2: user_id: 1,
     },
     {
-        resume: 'link goes here',
-        dev_role_id: 2,
-        user_id: 2,
+        name: 'Roberto',
+        last_name: 'Hernandez',
+        email: 'robear@gmail.com',
+        resume: 'https://github.com/',
+        dev_role: 'Back End Developer',
+        //phase2: user_id: 2,
     },
 ];
 

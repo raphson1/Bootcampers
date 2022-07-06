@@ -1,0 +1,17 @@
+<!-- Loop over each user object -->
+{{#if applicants.length}} 
+<h3> View All Applicants </h3>
+{{#each applicants as |applicant| }}
+<div class="row align-center mb-5">
+  <div class="col-md-6">
+    <!-- Render user-specific data with Handlebars.js expressions -->
+    <p class="hbsInputsNames"> Graduate: {{applicant.name}} {{applicant.last_name}}</p>
+    <p>Resume: <a href="{{applicant.resume}}" target="_blank"> Github Repo</a></p>
+    <p> Title: {{applicant.dev_role}}</p>
+    <p> Contact: <a href="mailto:{{applicant.email}}"> {{applicant.email}} </a></p>
+    <br>
+    <br>
+  </div>
+</div> 
+{{/each}} 
+{{/if}}
