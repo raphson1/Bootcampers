@@ -3,8 +3,7 @@ require('dotenv').config();
 
 let sequelize;
 
-console.log(process.env.DB_USER, "hello")
-if (process.env.JAWSDB) {
+if (process.env.JAWSDB_URL) {
   sequelize = new Sequelize(process.env.JAWSDB);
 } else {
   sequelize = new Sequelize(
@@ -15,7 +14,7 @@ if (process.env.JAWSDB) {
       host: "localhost",
       dialect: "mysql",
       port: 3306,
-    }
+    },
   );
 }
 sequelize.query(
