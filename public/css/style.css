@@ -20,6 +20,12 @@
     letter-spacing: .2em;
   }
 
+  hr {
+    margin-top: 8px;
+    margin-bottom:8px;
+    border: black .5px solid;
+  }
+
   main {
     margin-top: 40px;
     text-align: center;
@@ -69,6 +75,16 @@ button {
   border: black 2px solid;
 }
 
+.button {
+  padding: 10px;
+  color: black;
+  text-decoration: wavy;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: black wavy underline;
+}
+
+
 /* homepage  */
 
 .homepagePerksTitle {
@@ -94,7 +110,6 @@ button {
 
 .perkCard h3 {
   padding-bottom: 20px;
-  text-decoration: purple wavy underline;
 }
 
 .perkCard p {
@@ -135,8 +150,8 @@ button {
 }
 
 form button {
-  width: 60px;
-  height: 30px;
+  width: 100%;
+  /* height: 30px; */
   margin-top: 5px;
   margin-bottom: 5px;
  
@@ -157,10 +172,34 @@ color: white;
   padding: 5px;
   border: none;
   background-color: transparent;
+  text-align: center;
 }
 
 .mainFormHeader {
   padding-bottom: 5px;
+}
+
+/* handlebars  */
+.hbsInputsNames{
+  font-weight: 400;
+  color: purple;
+}
+
+.allJobsFromContainer {
+    display: flex;
+    justify-content: space-evenly;
+
+
+}
+
+.allJobsInd {
+  border: 2px solid black;
+  padding: 40px;
+  text-transform: capitalize;
+}
+
+.allJobsForm p {
+padding-bottom: 10px;
 }
 
 /* footer */

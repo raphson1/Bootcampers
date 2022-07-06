@@ -2,24 +2,28 @@
 <div class="container"> Thank you for visiting, we are a website that showcases bootcamp graduates.<br>  Now showcasing 2022 UT Austin Bootcamp Cohort  <span role="img" aria-label="hand">🤘🏽</span> 
 </div>
 <div class="homepagePerksTitle"> 
-<h2> Create an account today! </h2>
+<h2> Create an company account today! </h2>
 </div>
 <p> check out the perks of using bootcampers </p>
 <div class="homepagePerksContainer">
+    <div class="perkCard">
+    <h3> Companies</h3>
+    <p> discover new talent </p>
+      <ul>
+      <li> browse all candidates </li>
+      <li> post open positions </li>
+      <br>
+      <li>  <a class="button" href="/login"> Sign Up </a> </li>
+    </ul>
+  </div>
   <div class="perkCard">
     <h3> Applicants </h3>
     <p> showcase yourself </p>
     <ul>
       <li> upload resume </li>
       <li> browse potential jobs </li>
-    </ul>
-  </div>
-  <div class="perkCard">
-    <h3> Companies</h3>
-    <p> discover new talent </p>
-      <ul>
-      <li> browse all candidates </li>
-      <li> post open positions </li>
+      <br>
+      <li>  <a class="button" href="/graduates"> Upload Now </a> </li>
     </ul>
   </div>
     <div class="perkCard">
@@ -28,21 +32,10 @@
       <ul>
       <li> browse all companies </li>
       <li> apply for jobs </li>
+      <li> applicant user profile </li>
+      <br>
       <li> </li>
     </ul>
   </div>
 </div>
 <img scr=""> 
-{{!-- <!-- Loop over each user object -->
-<div class="cardContainer" > 
-{{#each users as |user| }}
-<div>
-  <div class="hpItem">
-    <!-- Render user-specific data with Handlebars.js expressions -->
-    <h2> {{user.user_role}}</h2>
-    <p> Resume: {{applicant.resume}} </p>
-        <h3><a href="mailto:{{user.email}}">{{user.email}}</a></h3>
-  </div>
-</div>
-{{/each}}
-</div> --}}

@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
     //     {model: Roles}, {model: User},
     //   ],
     //  });
-    console.log("Checking to see if this work", jobData);
+    // console.log("Checking to see if this work", jobData);
      res.status(200).json(jobData);
     } catch(err) {
       res.status(500).json(err);
@@ -24,14 +24,17 @@ router.get('/', async (req, res) => {
 
 // post new job
 router.post('/',withAuth, async (req, res) => {
+  const body = req.body;
+  console.log(body)
   try {
     const newJob = await Jobs.create({
-      ...req.body,
-      user_id: req.session.user_id,
+      ...body,
+      user_id: req.session.user_id
     });
-    console.log("Checking to see if this work", newJob);
+    console.log("Here is a New job", newJob);
     res.status(200).json(newJob);
   } catch (err) {
+    console.log("it failed,", err)
     res.status(400).json(err);
   }
 });

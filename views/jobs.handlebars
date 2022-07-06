@@ -1,7 +1,21 @@
-<div>
-    <h3>{{company_name}}</h3>
-    <h4>{{job_title}}</h4>
-    <h4>{{dev_role_id}}</h4>
-
-    <p>Posted by {{user.id.company_name}}</p>
+<!-- Loop over each user object -->
+{{#if jobs.length}} 
+<div class="profileCard"> 
+<h2 > Job Openings </h2>
+<p> Hi there graduate! Congratulations! Browse our open positions below</p>
+</div>
+<br>
+<div class="allJobsFromContainer"> 
+{{#each jobs as |job| }}
+<div class="allJobsInd">
+    <!-- Render user-specific data with Handlebars.js expressions -->
+    <p> <span class="hbsInputsNames"> <h3> {{job.company_name}} </h3></span></p>
+    <p> <span class="hbsInputsNames"> Open Position: </span> <br> {{job.job_title}}</p>
+        <hr>
+    <p> <span class="hbsInputsNames"> Point Of Contact: </span> <br>{{job.user.name}} {{job.user.last_name}}</p>
+    <p> {{job.user.user_role}}</p>
+    <p> <a href="mailto:{{job.user.email}}"> {{job.user.email}} </a></p>
+</div> 
+{{/each}} 
+{{/if}}
 </div>

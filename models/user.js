@@ -23,6 +23,10 @@ User.init(
     type: DataTypes.STRING,
     allowNull: false,
   }, 
+  last_name: { //last name of user
+    type: DataTypes.STRING,
+    allowNull: false,
+  }, 
    email: { //user email
        type: DataTypes.STRING,
        allowNull: false,
