@@ -58,6 +58,10 @@
   color: black;
 
 }
+.navItem:hover {
+  background-color: black;
+  color: white;
+}
 
 .menuItemsNav {
   display: flex;
@@ -206,9 +210,47 @@ padding-bottom: 10px;
 
 footer {
   text-align: center;
+  padding-bottom: 20px;
+
 }
 footer a {
   text-decoration: none;
-  text-decoration: purple wavy underline;
   color: black;
+}
+footer a:hover {
+  background-color: dimgrey;
+  box-shadow: inset;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  nav{
+     flex-direction: column;
+     align-items: center;
+     height: max-content;
+     width: 100%;
+     justify-content:space-around;
+
+  }
+  .homepagePerksContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+.authForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.login-form{
+  padding-bottom: 10px;
+}
 }
