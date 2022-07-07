@@ -28,7 +28,7 @@ In Phase 1 of our project you will be able to see authentication, GET/POST route
 
 ## Deployed Application
 
-> * Heroku Link:
+> * Heroku Link: https://bootcampersut.herokuapp.com/
 
 ## Contributors
 
